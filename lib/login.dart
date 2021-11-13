@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 120.0),
             // TODO: Wrap Username with AccentColorOverride (103)
             // TODO: Remove filled: true values (103)
-           
+
         TextField(
           controller: _usernameController,
           decoration: InputDecoration(
@@ -104,6 +104,10 @@ class _LoginPageState extends State<LoginPage> {
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: const Text('NEXT'),
+                  // New code
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(8.0),
+                  ),
                   onPressed: () {
                     // TODO: Show the next page (101)
                     Navigator.pop(context);
